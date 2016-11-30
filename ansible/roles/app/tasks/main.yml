@@ -1,0 +1,9 @@
+---
+# application tasks to be customized and to run after the main provision
+- name: Vendor | Install
+  sudo: false
+  shell: composer install -n chdir={{ project_root }}
+
+- name: Doctrine | Migrate
+  sudo: false
+  shell: app/console doctrine:migrations:migrate -n chdir={{ project_root }}
