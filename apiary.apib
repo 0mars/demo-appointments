@@ -1,0 +1,40 @@
+FORMAT: 1A
+HOST: http://demo.dev/api/v1/
+
+# appointments
+
+Appointments booking API
+
+## Time Slots Collection [/time-slots]
+
+### Generate Time Slots [PATCH]
+
++ Request (application/json)
+
+        {
+            "start": "08:00",
+            "end": "16:00",
+            "interval": 15
+        }
+
++ Response 200 (application/json)
+
+        {"code":200,"message":"OK"}
+
+
+## Appointments Collection [/appointments]
+
+### Book an Appointment [POST]
+
+Accepts Date time ISO8601
+
++ Request (application/json)
+
+        {
+            "start_time": "2050-11-28T12:00:00+0000"
+        }
+
+
++ Response 201 (application/json)
+
+        {"code":201,"message":"Created"}
