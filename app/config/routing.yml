@@ -1,0 +1,4 @@
+demo_appointment:
+    resource: "@DemoAppointmentBundle/Resources/config/routing.xml"
+    prefix:   /api/v1/
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <route id="demo_appointment_time_slots_generate" path="time-slots/generate" methods="PATCH">
+        <default key="_controller">DemoAppointmentBundle:TimeSlots:generate</default>
+        <default key="_format">json</default>
+    </route>
+
+    <route id="demo_appointment_appointments_post" path="appointments" methods="POST">
+        <default key="_controller">DemoAppointmentBundle:Appointments:post</default>
+        <default key="_format">json</default>
+    </route>
+
+</routes>

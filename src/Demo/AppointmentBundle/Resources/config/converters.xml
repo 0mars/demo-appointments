@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+
+        <service id="demo.appointment.converters.generate_time_slots" class="Demo\AppointmentBundle\Converter\GenerateTimeSlotsConverter">
+            <argument type="service" id="demo.appointment.validators.generate_time_slots" />
+            <tag name="request.param_converter" priority="-2" converter="generate_time_slots_converter" />
+        </service>
+
+        <service id="demo.appointment.converters.book_appointment" class="Demo\AppointmentBundle\Converter\BookAppointmentConverter">
+            <argument type="service" id="demo.appointment.validators.book_appointment" />
+            <tag name="request.param_converter" priority="-2" converter="book_appointment_converter" />
+        </service>
+
+    </services>
+</container>
+
